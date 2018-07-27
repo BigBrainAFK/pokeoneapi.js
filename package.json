@@ -1,0 +1,27 @@
+{
+  "name": "pokeone-api",
+  "version": "0.0.1",
+  "description": "Simple NodeJS library to interact with the PokéOne API",
+  "main": "index.js",
+  "scripts": {
+	"test": "npm run lint",
+	"lint": "eslint . *.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BigBrainAFK/pokeoneapi.js.git"
+  },
+  "keywords": ["rest", "pokemon", "pokeone", "library", "lightweight"],
+  "author": "BigBrainAFK",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/BigBrainAFK/pokeoneapi.js/issues"
+  },
+  "homepage": "https://github.com/BigBrainAFK/pokeoneapi.js#readme",
+  "dependencies": {
+    "node-fetch": "^2.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.2.0"
+  }
+}

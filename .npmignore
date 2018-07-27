@@ -1,0 +1,13 @@
+# Folders
+node_modules/
+.vscode/
+.git/
+test/
+
+# Files
+yarn.lock
+*lock.json
+*.log
+.gitignore
+.eslintrc.json
+.gitattributes
