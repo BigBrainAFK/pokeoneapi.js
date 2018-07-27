@@ -1,5 +1,5 @@
 {
-  "name": "pokeone-api",
+  "name": "pokeoneapi.js",
   "version": "0.0.1",
   "description": "Simple NodeJS library to interact with the PokéOne API",
   "main": "index.js",
