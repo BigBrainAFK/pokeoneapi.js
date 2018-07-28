@@ -3,6 +3,7 @@ node_modules/
 .vscode/
 .git/
 test/
+travis/
 
 # Files
 yarn.lock
@@ -11,3 +12,4 @@ yarn.lock
 .gitignore
 .eslintrc.json
 .gitattributes
+.travis.yml
