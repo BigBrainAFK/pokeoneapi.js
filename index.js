@@ -36,8 +36,6 @@ class Router {
 	}
 
 	async rawHandler(name) {
-		if (!validRequests.includes(name)) return new RangeError(`'${name}' is not a valid request!`);
-
 		const reqBody = {
 			request: name
 		};
