@@ -10,7 +10,7 @@ class Router {
 	}
 
 	async handler(name) {
-		if (!validRequests.includes(name)) return new RangeError(`${name} is not a valid request!`);
+		if (!validRequests.includes(name)) return new RangeError(`'${name}' is not a valid request!`);
 
 		const reqBody = {
 			request: name
