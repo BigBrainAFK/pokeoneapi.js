@@ -1,7 +1,16 @@
 const fetch = require('node-fetch');
 const { validRequests } = require('./src/util/constants');
 
+/**
+ * Router class that handles all API requests
+ * @class Router
+ */
 class Router {
+	/**
+	 * API Handler
+	 * @returns {Proxy} Proxy handler to handle all the API requests
+	 * @readonly
+	 */
 	get api() {
 		const handler = this.handler;
 		return new Proxy({}, {
@@ -9,6 +18,11 @@ class Router {
 		});
 	}
 
+	/**
+	 * RAW API Handler
+	 * @returns {Proxy} Proxy handler to handle all the API requests
+	 * @readonly
+	 */
 	get raw() {
 		const rawHandler = this.rawHandler;
 		return new Proxy({}, {
@@ -16,6 +30,11 @@ class Router {
 		});
 	}
 
+	/**
+	 * Handles a specific request
+	 * @param {string} name The name of the endpoint
+	 * @returns {Object} The response in JSON format
+	 */
 	async handler(name) {
 		if (!validRequests.includes(name)) return new RangeError(`'${name}' is not a valid request!`);
 
@@ -35,6 +54,11 @@ class Router {
 		return resBody.success ? resBody.response.online : resBody.response;
 	}
 
+	/**
+	 * Handles a specific request but returns the raw response
+	 * @param {string} name The name of the endpoint
+	 * @returns {Response} The response in its RAW state
+	 */
 	async rawHandler(name) {
 		const reqBody = {
 			request: name
