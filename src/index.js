@@ -9,7 +9,7 @@ const { validRequests } = require('./src/util/constants');
 class Router {
 	/**
 	 * API Request handler, returns response formatted
-	 * @type {Proxy}
+	 * @type {ProxyConstructor}
 	 * @readonly
 	 */
 	get api() {
@@ -21,7 +21,7 @@ class Router {
 
 	/**
 	 * RAW API Request handler, returns response unformatted
-	 * @type {Proxy}
+	 * @type {ProxyConstructor}
 	 * @readonly
 	 */
 	get raw() {
@@ -58,7 +58,7 @@ class Router {
 	/**
 	 * Handles a specific request but returns the raw response
 	 * @param {string} name The name of the endpoint
-	 * @returns {Response} The response in its RAW state
+	 * @returns {*} The response in its RAW state
 	 */
 	async rawHandler(name) {
 		const reqBody = {
