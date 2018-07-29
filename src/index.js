@@ -1,10 +1,6 @@
 const fetch = require('node-fetch');
 const { validRequests } = require('./src/util/constants');
 
-/**
- * Router class that handles all API requests
- * @class Router
- */
 class Router {
 	/**
 	 * API Handler
