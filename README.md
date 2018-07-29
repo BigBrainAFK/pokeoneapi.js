@@ -25,7 +25,7 @@ In the future we hope to be:
 - Object-oriented
 - Predictable abstractions
 - Performant
-- 100% coverage of the Discord API
+- 100% coverage of the PokéOne API
 
 ## Installation
 **Node.js 8.0.0 or newer is required.**
@@ -36,7 +36,7 @@ In the future we hope to be:
 const Router = require('pokeoneapi.js');
 const API = new Router().api;
 
-api.usersonline.then(console.log);
+API.usersonline.then(console.log);
 ```
 
 ## Contributing

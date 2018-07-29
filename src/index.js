@@ -1,10 +1,15 @@
 const fetch = require('node-fetch');
 const { validRequests } = require('./src/util/constants');
 
+/**
+ * Router class that handles all the API routing
+ *
+ * @class Router
+ */
 class Router {
 	/**
-	 * API Handler
-	 * @returns {Proxy} Proxy handler to handle all the API requests
+	 * API Request handler, returns response formatted
+	 * @type {Proxy}
 	 * @readonly
 	 */
 	get api() {
@@ -15,8 +20,8 @@ class Router {
 	}
 
 	/**
-	 * RAW API Handler
-	 * @returns {Proxy} Proxy handler to handle all the API requests
+	 * RAW API Request handler, returns response unformatted
+	 * @type {Proxy}
 	 * @readonly
 	 */
 	get raw() {
