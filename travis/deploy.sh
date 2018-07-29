@@ -18,7 +18,6 @@ elif [ -n "$TRAVIS_TAG" ]; then
   echo -e "\e[36m\e[1mBuild triggered for tag \"${TRAVIS_TAG}\"."
   SOURCE=$TRAVIS_TAG
   SOURCE_TYPE="tag"
-  DONT_COMMIT=false
 else
   echo -e "\e[36m\e[1mBuild triggered for branch \"${TRAVIS_BRANCH}\"."
   SOURCE=$TRAVIS_BRANCH
