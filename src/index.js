@@ -1,5 +1,5 @@
 const fetch = require('node-fetch');
-const { validRequests } = require('./src/util/constants');
+const { validRequests } = require('./util/constants');
 
 /**
  * Router class that handles all the API routing
@@ -39,14 +39,12 @@ class Router {
 	async handler(name) {
 		if (!validRequests.includes(name)) return new RangeError(`'${name}' is not a valid request!`);
 
-		const reqBody = {
-			request: name
-		};
+		const reqBody = `request=${name}`;
 
 		const response = await fetch('http://api.poke.one/', {
 			method: 'POST',
-			body: JSON.stringify(reqBody),
-			headers: { 'Content-Type': 'application/json' }
+			body: reqBody,
+			headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
 		})
 			.catch(console.error);
 
@@ -61,14 +59,12 @@ class Router {
 	 * @returns {*} The response in its RAW state
 	 */
 	async rawHandler(name) {
-		const reqBody = {
-			request: name
-		};
+		const reqBody = `request=${name}`;
 
 		const response = await fetch('http://api.poke.one/', {
 			method: 'POST',
-			body: JSON.stringify(reqBody),
-			headers: { 'Content-Type': 'application/json' }
+			body: reqBody,
+			headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
 		})
 			.catch(console.error);
 
