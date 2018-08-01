@@ -10,7 +10,7 @@ jobs:
       node_js: 9
       script: bash ./travis/deploy.sh
       env:
-        - ENCRYPTION_LABEL="17c2e720553a"
+        - ENCRYPTION_LABEL="fcdb45ae398e"
         - COMMIT_AUTHOR_EMAIL="tony.langhammer@yahoo.de"
 cache:
   directories:
